@@ -1,22 +1,8 @@
 import { Box, Text, Button } from "@chakra-ui/react";
 import { useState } from "react";
 
-const intros = [
-  "Welcome to Perspective Cards!",
-  "Get ready to gain new perspectives!",
-  "Diversity of thought leads to innovation.",
-  "Design for everyone, everywhere.",
-  "Challenge your biases.",
-];
-
-const users = [
-  "Designer",
-  "Developer",
-  "Product Manager",
-  "Marketer",
-  "Entrepreneur",
-];
-
+const intros = ['Imagine your', 'What if the'];
+	const users = [ 'user', 'customer'];
 const perspectives = [
   "Cultural",
   "Gender",
@@ -26,12 +12,18 @@ const perspectives = [
 ];
 
 const descriptions = [
-  "Take a step back and think about how someone from a different culture might approach this problem.",
-  "Consider how this feature might be used differently by men and women.",
-  "Think about how someone with a different age might use this product.",
-  "Consider how someone who speaks a different language might interpret this content.",
-  "Think about how someone from a different religious background might approach this issue.",
-];
+  'Does the user experience offer the same outcome/equitable experience for this group?',
+  'Is your user experience straightforward and the message clear for this group?',
+  'What would the sensory experience be like for the user in this group?',
+  'What is the value your product provides for this group?',
+  'Is it effortless for this group to access your product?',
+  'Is your product accessible to this group?',
+  'Is there anything in your product that\'s potentially offensive to this group?',
+  'Are there any ways to make the product more accessible to this group?',
+  'How is the user experience different for this group than the experience of the target user?',
+  'Are there any changes that can be made to the product to cater/be more inclusive for this group?',
+  'How is this user most likely to engage with your product?'
+]
 
 function generateCardData() {
   const intro = intros[Math.floor(Math.random() * intros.length)];
@@ -55,18 +47,18 @@ function generateCardData() {
 
 const Card = ({ title, catagory }) => {
 
-  const {intro, user, perspective, descript} = generateCardData();
+  const {intro, user, perspective, description} = generateCardData();
   const [var1, setVar1] = useState(intro);
   const [var2, setVar2] = useState(user);
   const [var3, setVar3] = useState(perspective);
-  const [var4, setVar4] = useState(descript);
+  const [var4, setVar4] = useState(description);
 
   const handleClick = () => {
-    const {intro, user, perspective, descript} = generateCardData();
+    const {intro, user, perspective, description} = generateCardData();
     setVar1(intro);
     setVar2(user);
     setVar3(perspective);
-    setVar4(descript);
+    setVar4(description);
   
   };
 
@@ -82,7 +74,7 @@ const Card = ({ title, catagory }) => {
       textAlign="left"
       mb={4}
       height="400px"
-      width="400px"
+      width="700px"
       display="flex"
       flexDirection="column"
       justifyContent="space-between"
@@ -90,9 +82,12 @@ const Card = ({ title, catagory }) => {
     >
       <Box>
         <Text fontWeight="bold" fontSize="lg" mb={2} justifyItems="center" alignItems="center">
-          {var1} is {var2}, {var3}
+          {var1} <br/>{var2} is {var3}
         </Text>
-        <Text mb={4}>this is description{var4}</Text>
+        <Text  fontSize="sm" mb={2} justifyItems="center" alignItems="center">
+          {var4}
+        </Text>
+     
       </Box>
       <Button colorScheme="black" bg="black " onClick={handleClick}>
         Read More

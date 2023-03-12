@@ -1,6 +1,7 @@
 import { Box, Flex, Text, Menu, MenuButton, MenuList, MenuItem, Button, IconButton } from '@chakra-ui/react';
 import { FaShareAlt } from 'react-icons/fa';
 import { useState } from 'react';
+import Card from './Card';
 
 // Example data
 const cards = [
@@ -12,14 +13,14 @@ const cards = [
   { id: 6, title: 'Card 6', category: 'Religion' },
 ];
 
-function Card({ card }) {
-  return (
-    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={4}>
-      <Text fontWeight="bold" mb={2}>{card.title}</Text>
-      <Text>{card.category}</Text>
-    </Box>
-  );
-}
+// function Card({ card }) {
+//   return (
+//     <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={4}>
+//       <Text fontWeight="bold" mb={2}>{card.title}</Text>
+//       <Text>{card.category}</Text>
+//     </Box>
+//   );
+// }
 
 function CardContainer() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -57,7 +58,7 @@ function CardContainer() {
       <Box display="flex" justifyContent="center" alignItems="center" height="400px">
         {filteredCards.map(card => (
           <Box key={card.id} mr={4}>
-            <Card card={card} />
+            <Card title={card.title} catagory={card.category} />
           </Box>
         ))}
       </Box>

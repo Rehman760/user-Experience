@@ -8,18 +8,18 @@ function Navbar() {
           <Link href="/" mr={4}>Logo</Link>
           <Link href="/WhatIS" mr={4}>What is this</Link>
           <Menu >
-          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+          <MenuButton as={Button} mr={4} rightIcon={<ChevronDownIcon />} bg="black" _hover={{bg:"white",color:"black"}}>
             Guide
           </MenuButton>
-          <MenuList>
-            <MenuItem  _hover={{ bg: 'black' }}>Download</MenuItem>
-            <MenuItem  _hover={{ bg: 'black' }}>Create a Copy</MenuItem>
-            <MenuItem _hover={{ bg: 'black' }}>Mark as Draft</MenuItem>
-            <MenuItem _hover={{ bg: 'black' }}>Delete</MenuItem>
-            <MenuItem _hover={{ bg: 'black' }}>Attend a Workshop</MenuItem>
+          <MenuList bg="black">
+            <MenuItem  bg="black"_hover={{ bg: 'white', color:"black" }}>Download</MenuItem>
+            <MenuItem  bg="black"_hover={{ bg: 'white', color:"black" }}>Create a Copy</MenuItem>
+            <MenuItem bg="black"_hover={{ bg: 'white', color:"black" }}>Mark as Draft</MenuItem>
+            <MenuItem bg="black"_hover={{ bg: 'white', color:"black" }}>Delete</MenuItem>
+            <MenuItem bg="black"_hover={{ bg: 'white', color:"black" }}>Attend a Workshop</MenuItem>
           </MenuList>
         </Menu>
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact" mr={4}>Contact</Link>
         </Box>
         <Box>
           <Link href="/signin" mr={4}>Sign In</Link>

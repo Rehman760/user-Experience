@@ -9,9 +9,9 @@ function Layout({ children }) {
     <Box bg="black">
       
         
-       
+      <Navbar />
 
-         <Navbar />
+      
         
       <Container maxW="container.xl"  bg="white" boxShadow="md" borderRadius="md" minH="80vh">
         <Box as="header" mb={8}>

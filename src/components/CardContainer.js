@@ -111,7 +111,7 @@ function CardContainer() {
             <MenuItem onClick={() => handleCategorySelect('Different Abled')}>Different Abled</MenuItem>
           </MenuList>
         </Menu>
-        <IconButton aria-label="Share" icon={<FaShareAlt />} variant="outline" colorScheme="gray" />
+        <IconButton aria-label="Share" icon={<FaShareAlt />} variant="outline" colorScheme="gray" ml='auto'/>
       </Flex>
       {/* Your card components here */}
 

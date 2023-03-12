@@ -116,11 +116,7 @@ function CardContainer() {
       {/* Your card components here */}
 
       <Box display="flex" justifyContent="center" alignItems="center" height="400px">
-        {filteredCards.map(card => (
-          <Box key={card.id} mr={4}>
-            <Card title={card.title} catagory={card.category} />
-          </Box>
-        ))}
+       <Card cards={filteredCards}/>
       </Box>
     </Box>
   );

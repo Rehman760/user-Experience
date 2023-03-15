@@ -5,7 +5,7 @@ function Navbar() {
     <Box bg="black" color="white" px={4}>
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <Box>
-          <Link href="/" mr={4}>Logo</Link>
+          <Link href="/" mr={4} px={8} bg="grey"> </Link>
           <Link href="/WhatIS" mr={4}>What is this</Link>
           <Menu >
           <MenuButton as={Button} mr={4} rightIcon={<ChevronDownIcon />} bg="black" _hover={{bg:"white",color:"black"}}>

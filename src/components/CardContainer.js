@@ -2,7 +2,7 @@ import { Box, Flex, Text, Menu, MenuButton, MenuList, MenuItem, Button, IconButt
 import { FaShareAlt } from 'react-icons/fa';
 import { useState } from 'react';
 import Card from './Card';
-
+import { ChevronDownIcon } from '@chakra-ui/icons';
 // Example data
 var cards = [
   {category:"Race or Color", fill: 'is', perspective: 'Hispanic',	tooltip: 'A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin regardless of race.', linktext: 'Learn More', link: 'http://benj.mn/Religion or creedhTIRace or Colorxa'},
@@ -93,11 +93,11 @@ function CardContainer() {
   return (
     <Box  borderRadius="md" p={4}>
       <Flex justify="row" align="center" mb={4}>
-        <Text fontSize="lg" fontWeight="bold">
+        <Text fontSize="lg" fontWeight="bold" px={8}>
           Show me:
         </Text>
         <Menu>
-          <MenuButton as={Button}>
+          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
             {selectedCategory ? selectedCategory : 'All cards'}
           </MenuButton>
           <MenuList>

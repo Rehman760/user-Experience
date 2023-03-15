@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Text, Button } from "@chakra-ui/react";
+import {Link, Box, Text, Button, Tooltip } from "@chakra-ui/react";
 import IconWithDescription from './IconWithDescription';
+
 
 function View({intro,user,description,perspective,tooltip,link}) {
     return (
@@ -21,10 +22,10 @@ function View({intro,user,description,perspective,tooltip,link}) {
           <Box>
             <Text fontWeight="bold" fontSize="lg" mb={4} justifyItems="center" alignItems="center">
               {intro} {user} is {perspective} 
-            <IconWithDescription  tooltip={tooltip} link={link}/>
+            {/* <IconWithDescription  tooltip={tooltip} link={link}/> */}
             </Text>
             <Text  fontSize="sm" mb={2} justifyItems="center" alignItems="center">
-              {description}
+              {description} <Tooltip label={tooltip} aria-label={tooltip}><Link href={link} isExternal fontWeight="bold">Learn more.</Link></Tooltip>
             </Text>
          
           </Box>
